@@ -1,0 +1,48 @@
+орилго
+
+Inheritance болон Delegation-ийн ялгааг SortedIntList дээр хэрэгжүүлж ойлгох.
+
+1-р даалгавар — InheritanceSortedIntList
+
+SortedIntList class-аас inherit хийсэн.
+
+public class InheritanceSortedIntList extends SortedIntList
+Хийсэн зүйл
+add() method override хийсэн.
+Нэмэгдсэн элемент бүрийн тоог totalAdded хувьсагчаар хадгалсан.
+getTotalAdded() method нэмсэн.
+public int getTotalAdded() {
+    return totalAdded;
+}
+2-р даалгавар — DelegationSortedIntList
+
+Inheritance ашиглахгүйгээр дотроо SortedIntList object хадгалж ашигласан.
+
+private final SortedIntList list;
+Хийсэн зүйл
+add()
+addAll()
+remove()
+removeAll()
+get()
+size()
+getTotalAdded()
+
+method-уудыг хэрэгжүүлсэн.
+3-р даалгавар — Unit test ажиллуулах
+Command
+cd C:\Users\Dell\OneDrive\Desktop\sem_2\fcsa311\f.csa311-lab06\s24-lab06\Java
+mvn test "-Djacoco.skip=true"
+Яагаад jacoco.skip=true ашигласан бэ?
+
+Java version болон JaCoCo version таарахгүйгээс coverage plugin алдаа өгч байсан. Тиймээс test-ийг ажиллуулахын тулд coverage-г түр skip хийсэн.
+
+Шалгах үед гарах үр дүн
+Tests run: 4, Failures: 0, Errors: 0
+BUILD SUCCESS
+4-р даалгавар — GitHub push
+git remote set-url origin https://github.com/Zolnaiz/f.csa311-lab06.git
+git push -u origin main
+
+Тайлбарлах
+Lab06 дээр нэг асуудлыг 2 өөр аргаар шийдсэн. Inheritance хувилбар нь SortedIntList-ээс шууд удамшсан. Delegation хувилбар нь SortedIntList object-ийг дотроо хадгалж, method дуудах үед түүнд дамжуулдаг. Ингэснээр inheritance болон composition/delegation-ийн ялгааг харуулсан.

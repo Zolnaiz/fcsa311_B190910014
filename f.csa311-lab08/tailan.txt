@@ -1,0 +1,58 @@
+Зорилго
+
+TypeScript project дээр card prioritization algorithm хэрэгжүүлэх.
+
+1-р даалгавар — Dependency суулгах
+npm install
+Үр дүн
+
+Node package-ууд суусан.
+2-р даалгавар — Compile шалгах
+npm run compile
+Үр дүн
+
+TypeScript compile error-гүй болсон.
+3-р даалгавар — Recent Mistakes First Sorter
+
+src/ordering/prioritization/recentmistakes.ts файлыг зассан.
+
+Хийсэн logic
+Card бүрийн хамгийн сүүлийн result-ийг авсан.
+Хамгийн сүүлд буруу хариулсан card-уудыг эхэнд гаргадаг болгосон.
+Зөв хариулсан болон буруу хариулсан card-уудын дотоод дарааллыг хадгалсан.
+Гол logic
+const aLastWrong = aResults.length > 0 && !aResults[aResults.length - 1]
+const bLastWrong = bResults.length > 0 && !bResults[bResults.length - 1]
+
+if (aLastWrong === bLastWrong) {
+  return 0
+}
+
+return aLastWrong ? -1 : 1
+
+4-р даалгавар — Jest test ажиллуулах
+npm run test
+Шалгах үед гарах үр дүн
+PASS tests/ordering.test.ts
+Tests: 2 passed, 2 total
+
+5-р даалгавар — Lint шалгах
+npm run lint
+Эхэнд гарсан асуудал
+Boolean comparison lint error гарсан.
+File-ийн төгсгөлд шинэ мөр байхгүй гэсэн error гарсан.
+Зассан зүйл
+=== false гэж бичсэн хэсгийг !value болгож зассан.
+File-ийн төгсгөлд newline нэмсэн.
+Эцсийн үр дүн
+
+Lint error байхгүй болсон.
+6-р даалгавар — GitHub push
+git add .
+git commit -m "Complete Lab08 recent mistakes sorter"
+git remote set-url origin https://github.com/Zolnaiz/f.csa311-lab08.git
+git push -u origin main
+
+тайлбар
+
+Lab08 дээр TypeScript flashcard system-ийн recent mistakes sorting algorithm-ийг хэрэгжүүлсэн. Карт бүрийн сүүлийн хариултын үр дүнг шалгаж, хамгийн сүүлд буруу хариулсан картуудыг эхэнд гаргадаг болсон. Compile, Jest test, lint бүгд pass болсон.

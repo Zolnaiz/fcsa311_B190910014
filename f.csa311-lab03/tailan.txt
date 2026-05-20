@@ -1,0 +1,28 @@
+Зорилго
+
+Git branch, merge, GitHub Actions CI workflow ойлгох.
+
+Хийсэн зүйлс
+GitHub дээр f.csa311-lab03 repository үүсгэсэн.
+Repository clone хийсэн.
+README.md үүсгэсэн.
+feature/test-branch branch үүсгэсэн.
+Branch дээр өөрчлөлт хийж commit хийсэн.
+Branch-ийг main руу merge хийсэн.
+GitHub Actions workflow үүсгэсэн.
+Ашигласан command
+git clone https://github.com/Zolnaiz/f.csa311-lab03.git
+cd f.csa311-lab03
+git checkout -b feature/test-branch
+git add .
+git commit -m "Branch test"
+git push -u origin feature/test-branch
+git checkout main
+git merge feature/test-branch
+git push
+Шалгах арга
+
+GitHub repository → Actions tab руу орж workflow ногоон болсон эсэхийг шалгасан.
+
+тайлбар
+Lab03 дээр Git branch үүсгэж, өөр branch дээр өөрчлөлт хийж commit/push хийсэн. Дараа нь main branch руу merge хийсэн. Мөн GitHub Actions workflow үүсгээд push хийх үед CI автоматаар ажилладаг болгосон.

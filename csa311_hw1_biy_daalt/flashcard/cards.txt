@@ -1,0 +1,3 @@
+Java гэж юу вэ?|Programming Language
+Maven ямар зориулалттай вэ?|Build Tool
+OOP гэж юу вэ?|Object Oriented Programming

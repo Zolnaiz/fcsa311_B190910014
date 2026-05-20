@@ -1,0 +1,33 @@
+Зорилго
+
+OOP-ийн encapsulation, interface, polymorphism ойлголтуудыг shape example дээр хэрэгжүүлэх.
+
+Хийсэн зүйлс
+Shape interface үүсгэсэн.
+Rectangle, Circle, Square class-ууд үүсгэсэн.
+Бүх shape class-д getArea() method хэрэгжүүлсэн.
+Renderer class-ийг зөвхөн Rectangle биш, ерөнхий Shape interface ашигладаг болгож refactor хийсэн.
+Rectangle class-ийн height, width талбаруудыг private болгож encapsulation хийсэн.
+Жишээ
+
+Өмнө нь Renderer зөвхөн Rectangle авдаг байсан.
+public Rectangle rectangle;
+
+Дараа нь interface ашигладаг болгосон.
+
+private Shape shape;
+Ажиллуулах command
+cd C:\Users\Dell\OneDrive\Desktop\sem_2\fcsa311\f.csa311-lab02\java
+mvn compile
+mvn exec:java "-Dexec.mainClass=edu.cmu.cs.cs214.lab02.Main"
+Шалгах үед гарах үр дүн
+Shape printed
+Its area is 6.0
+BUILD SUCCESS
+GitHub push
+git add .
+git commit -m "Lab02 encapsulation refactor"
+git push
+
+тайлбар
+Lab02 дээр OOP-ийн abstraction болон polymorphism ашигласан. Shape interface үүсгээд Rectangle, Circle, Square зэрэг class-ууд түүнийг implement хийсэн. Renderer class нь тодорхой нэг class-аас хамаарахгүй, interface-ээс хамаардаг болсон. Ингэснээр loose coupling үүссэн.

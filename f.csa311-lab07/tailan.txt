@@ -1,0 +1,47 @@
+Зорилго
+
+Code organization, package separation, interface ашиглах дадлага хийх.
+
+1-р даалгавар — Maven project setup
+
+Empty repository clone хийж Maven project үүсгэсэн.
+
+mvn archetype:generate "-DgroupId=edu.cmu.cs.cs214.lab07" "-DartifactId=lab07" "-DarchetypeArtifactId=maven-archetype-quickstart" "-DinteractiveMode=false"
+
+Compile хийсэн.
+
+mvn compile
+
+2-р даалгавар — drawing package үүсгэх
+
+Дараах class/interface үүсгэсэн.
+
+drawing/
+ ├─ Drawable.java
+ ├─ Shape.java
+ ├─ Line.java
+ └─ Drawing.java
+Хийсэн зүйл
+Drawable interface үүсгэсэн.
+Shape abstract class үүсгэсэн.
+Line class нь Shape class-аас inherit хийсэн.
+Drawing class нь олон Drawable object хадгалж render хийдэг болсон.
+3-р даалгавар — frogger package үүсгэх
+frogger/
+ ├─ Frogger.java
+ ├─ FroggerID.java
+ ├─ Road.java
+ └─ Records.java
+Хийсэн зүйл
+Frogger game object-уудыг тусдаа class болгож салгасан.
+Records class дээр оноо хадгалах logic хийсэн.
+Road class дээр замын мэдээлэл харуулах method хийсэн.
+4-р даалгавар — Compile/Test
+mvn compile
+mvn test
+Шалгах үед гарах үр дүн
+BUILD SUCCESS
+Tests run: 1, Failures: 0, Errors: 0
+
+Тайлбарлах
+Lab07 дээр кодыг package-уудаар салгаж, drawing болон frogger гэсэн хоёр хэсэг болгон зохион байгуулсан. Drawing хэсэгт interface болон abstract class ашиглаж polymorphism харуулсан. Frogger хэсэгт game object-уудыг тус тусдаа class болгож refactor хийсэн.

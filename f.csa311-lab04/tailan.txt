@@ -1,0 +1,63 @@
+Зорилго
+
+JUnit test бичих, queue implementation дээр bug илрүүлж засах.
+
+Хийсэн зүйлс
+1-р даалгавар — Unit test бичих
+
+IntQueueTest.java дээр дараах test-үүдийг бичсэн.
+
+testIsEmpty()
+testNotEmpty()
+testPeekEmptyQueue()
+testPeekNoEmptyQueue()
+testEnqueue()
+testDequeue()
+testClear()
+testResizeAfterWrapAround()
+Эдгээр test нь queue-ийн үндсэн үйлдлүүдийг шалгасан.
+
+2-р даалгавар — ArrayIntQueue bug засах
+Bug 1 — isEmpty() буруу байсан
+
+Өмнөх код:
+
+return size >= 0;
+
+Энэ нь үргэлж true буцааж байсан.
+
+Зассан:
+
+return size == 0;
+
+Bug 2 — peek() empty queue дээр буруу ажиллаж байсан
+
+Зассан:
+
+public Integer peek() {
+    if (isEmpty()) {
+        return null;
+    }
+    return elementData[head];
+}
+Bug 3 — ensureCapacity() circular queue copy logic буруу байсан
+
+Wrap-around болсон үед array resize хийхэд дараалал алдагдаж байсан.
+
+Зассан:
+
+for (int i = 0; i < head; i++) {
+    newData[oldCapacity - head + i] = elementData[i];
+}
+3-р даалгавар — Structural testing
+
+testResizeAfterWrapAround() test бичиж circular queue resize зөв эсэхийг шалгасан.
+Ажиллуулах command
+cd C:\Users\Dell\OneDrive\Desktop\sem_2\fcsa311\f.csa311-lab04\f.csa311.25b-lab04\Java
+mvn test
+Шалгах үед гарах үр дүн
+Tests run: 9, Failures: 0, Errors: 0
+BUILD SUCCESS
+
+тайлбар
+Lab04 дээр JUnit ашиглан queue-ийн behavior шалгасан. Эхлээд LinkedIntQueue дээр specification test бичсэн. Дараа нь ArrayIntQueue дээр test ажиллуулж 3 bug илрүүлсэн. isEmpty, peek, ensureCapacity method-уудыг засаж бүх test pass болгосон.

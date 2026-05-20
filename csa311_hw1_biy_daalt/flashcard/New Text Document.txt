@@ -1,0 +1,9 @@
+mvn compile
+mvn test
+chcp 65001
+mvn exec:java -D"exec.mainClass=mn.csa311.flashcard.FlashcardApp" -D"exec.args=cards.txt --order random"
+mvn exec:java -D"exec.mainClass=mn.csa311.flashcard.FlashcardApp" -D"exec.args=--help"
+--order random
+--order recent-mistakes-first
+--repetitions 2
+--invertCards

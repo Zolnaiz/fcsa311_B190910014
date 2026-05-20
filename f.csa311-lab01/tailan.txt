@@ -1,0 +1,30 @@
+Зорилго
+Java хөгжүүлэлтийн орчин бэлдэх, анхны Java програм бичих, GitHub руу push хийх.
+Хийсэн зүйлс
+Java суусан эсэхийг шалгасан.
+java -version
+Maven суулгасан.
+choco install maven -y
+mvn -version
+Java project folder structure үүсгэсэн.
+src/main/java/Main.java
+Main.java файл дээр энгийн Hello program бичсэн.
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, FCSA311!");
+    }
+}
+Compile болон run хийж шалгасан.
+javac Main.java
+java Main
+Шалгах үед гарах үр дүн
+Hello, FCSA311!
+GitHub-д хадгалсан
+git init
+git add .
+git commit -m "Lab01 final"
+git branch -M main
+git remote add origin https://github.com/Zolnaiz/f.csa311-lab01.git
+git push -u origin main
+тайлбар
+Lab01 дээр Java болон Maven орчноо бэлдэж, анхны Java програм бичсэн. javac ашиглан compile хийж, java Main командаар ажиллуулсан. Дараа нь Git ашиглан commit хийж GitHub repository руу push хийсэн.
