@@ -1,0 +1,7 @@
+npm run dev
+npm run server
+Frontend нь React + TypeScript, backend нь Express.js.
+Task нэмэх, харах, устгах CRUD demo ажиллаж байгаа.
+AI-г planning, code generation, debugging, documentation-д ашигласан.
+AI гаргасан алдааг шууд итгээгүй, өөрөө ажиллуулж шалгасан.
+Жишээ нь require/module issue, PowerShell curl JSON issue, main.tsx JSX issue-ийг зассан.
